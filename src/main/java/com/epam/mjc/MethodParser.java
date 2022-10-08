@@ -26,7 +26,7 @@ public class MethodParser {
         String[] splitBySpace = signatureString.split("\\W");
         String accessModifier = "", returnType = "", methodName = "";
         List<MethodSignature.Argument> arguments = new ArrayList<>();
-        if(splitBySpace[0] == "public" || splitBySpace[0] == "private" || splitBySpace[0] == "protected")
+        if(splitBySpace[0].equals("public")  || splitBySpace[0].equals("private")  || splitBySpace[0].equals("protected"))
         {
             accessModifier = splitBySpace[0];
             returnType = splitBySpace[1];
